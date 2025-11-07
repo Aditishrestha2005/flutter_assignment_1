@@ -1,17 +1,15 @@
-// -------------------- INTEREST BEARING INTERFACE --------------------
 abstract class InterestBearing {
   void addInterest();
 }
 
-// -------------------- ABSTRACT BANK ACCOUNT --------------------
+
 abstract class BankAccount {
-  // Private fields
+
   final String _accountNumber;
   final String _accountHolderName;
   double _balance;
   List<String> transactionHistory = [];
 
-  // Constructor
   BankAccount(this._accountNumber, this._accountHolderName, this._balance);
 
   // Getters
@@ -24,7 +22,7 @@ abstract class BankAccount {
     if (value >= 0) _balance = value;
   }
 
-  // Abstract methods
+ 
   void deposit(double amount);
   void withdraw(double amount);
 
@@ -43,7 +41,7 @@ abstract class BankAccount {
   }
 }
 
-// -------------------- SAVINGS ACCOUNT --------------------
+
 class SavingsAccount extends BankAccount implements InterestBearing {
   static const double minBalance = 500;
   static const double interestRate = 0.02;
@@ -95,7 +93,7 @@ class SavingsAccount extends BankAccount implements InterestBearing {
   }
 }
 
-// -------------------- CHECKING ACCOUNT --------------------
+
 class CheckingAccount extends BankAccount {
   static const double overdraftFee = 35;
 
@@ -130,7 +128,7 @@ class CheckingAccount extends BankAccount {
   }
 }
 
-// -------------------- PREMIUM ACCOUNT --------------------
+
 class PremiumAccount extends BankAccount implements InterestBearing {
   static const double minBalance = 10000;
   static const double interestRate = 0.05;
@@ -169,7 +167,7 @@ class PremiumAccount extends BankAccount implements InterestBearing {
   }
 }
 
-// -------------------- STUDENT ACCOUNT --------------------
+
 class StudentAccount extends BankAccount {
   static const double maxBalance = 5000;
 
@@ -199,7 +197,7 @@ class StudentAccount extends BankAccount {
   }
 }
 
-// -------------------- BANK --------------------
+
 class Bank {
   List<BankAccount> accounts = [];
 
@@ -252,7 +250,7 @@ class Bank {
   }
 }
 
-// -------------------- MAIN --------------------
+
 void main() {
   var bank = Bank();
 
