@@ -256,10 +256,10 @@ class Bank {
 void main() {
   var bank = Bank();
 
-  var acc1 = SavingsAccount("S001", "Sabbu", 1000);
+  var acc1 = SavingsAccount("S001", "Adi", 1000);
   var acc2 = CheckingAccount("C001", "Aditi", 200);
-  var acc3 = PremiumAccount("P001", "Sabyata", 15000);
-  var acc4 = StudentAccount("ST001", "Nisha", 1000);
+  var acc3 = PremiumAccount("P001", "Sabbu", 15000);
+  var acc4 = StudentAccount("ST001", "Tomu", 1000);
 
   bank.addAccount(acc1);
   bank.addAccount(acc2);
